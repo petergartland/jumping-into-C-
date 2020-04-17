@@ -26,6 +26,14 @@ prob2.out: prob2.o
 prob2.o: prob2.cpp
 	$(CC) $(CFLAGS) prob2.cpp
 	
+prob3: prob3.out
+	
+prob3.out: prob3.o
+	$(CC) prob3.o -o prob3.out
+	
+prob3.o: prob3.cpp
+	$(CC) $(CFLAGS) prob3.cpp
+	
 clean:
-	rm -rf *o *.out
+	rm -rf *o *out
 	

@@ -18,10 +18,10 @@ int main()
 	*/
 	string first_name;
 	cout<<"please enter your first name\n";
-	cin>>first_name;
+	getline(cin,first_name, '\n');
 	string last_name;
 	cout<<"please enter your last name\n";
-	cin>>last_name;
+	getline(cin,last_name);
 	string full_name = first_name + " " + last_name;
 	cout<<"hello " << full_name << endl;
 }
