@@ -33,6 +33,7 @@ int main()
 	
 	cin>>input;
 	
+	
 	switch (input)
 	{
 		case 1:
