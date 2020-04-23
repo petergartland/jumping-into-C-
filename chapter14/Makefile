@@ -42,6 +42,14 @@ prob4.out: prob4.o
 prob4.o: prob4.cpp
 	$(CC) $(CFLAGS) prob4.cpp
 	
+prob5: prob5.out
+	
+prob5.out: prob5.o
+	$(CC) prob5.o -o prob5.out
+
+prob5.o: prob5.cpp
+	$(CC) $(CFLAGS) prob5.cpp
+	
 prob7: prob7.out
 	
 
