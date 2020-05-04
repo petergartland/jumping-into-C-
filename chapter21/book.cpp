@@ -1,4 +1,5 @@
 #include "linkedlist.h"
+#include "error.h"
 #include <iostream>
 #include <string>
 

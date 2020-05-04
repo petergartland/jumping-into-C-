@@ -7,19 +7,23 @@ book: book.out
 book.out: book.o linkedlist.o
 	$(CC) book.o linkedlist.o -o book.out
 	
-book.o: book.cpp linkedlist.h
+book.o: book.cpp linkedlist.h error.h
 	$(CC) $(CFLAGS) book.cpp
 	
-linkedlist.o: linkedlist.cpp
+linkedlist.o: linkedlist.cpp linkedlist.h
 	$(CC) $(CFLAGS) linkedlist.cpp
 	
 prob1: prob1.out
 	
-prob1.out: prob1.o 
-	$(CC) prob1.o -o prob1.out
+prob1.out: prob1.o functions.o
+	$(CC) prob1.o functions.o -o prob1.out
 	
-prob1.o: prob1.cpp
+prob1.o: prob1.cpp functions.h
 	$(CC) $(CFLAGS) prob1.cpp
+	
+functions.o: functions.cpp functions.h
+	$(CC) $(CFLAGS) functions.cpp
+	
 	
 prob2: prob2.out
 	
@@ -31,11 +35,14 @@ prob2.o: prob2.cpp
 	
 prob3: prob3.out
 	
-prob3.out: prob3.o
-	$(CC) prob3.o -o prob3.out
+prob3.out: prob3.o prob3_functions.o
+	$(CC) prob3.o prob3_functions.o -o prob3.out
 	
-prob3.o: prob3.cpp
+prob3.o: prob3.cpp prob3_functions.h
 	$(CC) $(CFLAGS) prob3.cpp
+	
+prob3_functions.o: prob3_functions.cpp prob3_functions.h
+	$(CC) $(CFLAGS) prob3_functions.cpp
 	
 prob4: prob4.out
 	
