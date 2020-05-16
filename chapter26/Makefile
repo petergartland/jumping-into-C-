@@ -22,3 +22,14 @@ prob1.o: prob1.cpp prob1func.h
 	
 prob1func.o: prob1func.cpp prob1func.h
 	g++ -c prob1func.cpp
+	
+prob3 : prob3.out
+	
+prob3.out: prob3.o prob3funct.o
+	g++ prob3.o prob3funct.o -o prob3.out
+	
+prob3.o: prob3.cpp prob3funct.h
+	g++ -c prob3.cpp 
+	
+prob3funct.o: prob3funct.cpp prob3funct.h
+	g++ -c prob3funct.cpp
