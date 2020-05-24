@@ -6,7 +6,6 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-cout<<"test"<<endl;
 /*
 	ifstream file_reader("myfile.txt");
 	if (! file_reader.is_open() )
@@ -65,5 +64,7 @@ cout<<"test"<<endl;
 		file<<endl;
 	file<<score<<endl;
 	for(vector<int>::iterator itr = scores.begin(); itr != scores.end(); ++itr)
+	{
 		file<<*itr<<endl;
+	}
 }
